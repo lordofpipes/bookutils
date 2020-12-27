@@ -6,7 +6,6 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.widget.ButtonWidget;
-import net.minecraft.client.gui.widget.LockButtonWidget;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.text.TranslatableText;
 
@@ -18,7 +17,6 @@ public class EpiphanyOptionsWidget extends ButtonWidget {
 	@Override
 	public void renderButton(MatrixStack matrices, int mouseX, int mouseY, float delta) {
 		MinecraftClient.getInstance().getTextureManager().bindTexture(Epiphany.EPI_WIDGETS);
-		// RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
 		EpiphanyOptionsWidget.IconLocation iconLocation = this.isHovered()?
 				IconLocation.OPTIONS_HOVERED:
 				IconLocation.OPTIONS;
