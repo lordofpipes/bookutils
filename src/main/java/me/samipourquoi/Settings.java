@@ -6,9 +6,6 @@ import java.io.PrintWriter;
 
 public class Settings {
 	public static boolean SMALL_BOOK = false;
-	public static final float SCALING_FACTOR = 0.5f;
-	public static int TRANSLATE_X = 0;
-	public static int TRANSLATE_Y = 0;
 
 	public static boolean BOOKMARKING = false;
 

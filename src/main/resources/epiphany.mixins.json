@@ -6,12 +6,12 @@
   "mixins": [],
   "client": [
     "MixinBookScreen",
+    "MixinBookEditScreen",
     "MixinButtonWidget",
     "MixinGameMenuScreen",
     "MixinGameRender",
     "MixinTitleScreen",
-    "MixinGameOptions",
-    "MixinBookEditScreen"
+    "MixinGameOptions"
   ],
   "injectors": {
     "defaultRequire": 1

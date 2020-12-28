@@ -1,6 +1,8 @@
 package me.samipourquoi.mixin;
 
+import me.samipourquoi.Epiphany;
 import me.samipourquoi.Settings;
+import me.samipourquoi.gui.BookScreenRescaler;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.ingame.BookScreen;
 import net.minecraft.client.render.GameRenderer;
@@ -24,11 +26,7 @@ public class MixinGameRender {
 			),
 			index = 5
 	)
-	private int mapMouseX(int mouseX) {
-		return MinecraftClient.getInstance().currentScreen instanceof BookScreen && Settings.SMALL_BOOK ?
-				(int)(mouseX / Settings.SCALING_FACTOR) - Settings.TRANSLATE_X :
-				mouseX;
-	}
+	private int mapMouseX(int mouseX) { return BookScreenRescaler.mapMouseX(mouseX); }
 
 	@ModifyVariable(
 			method = "render",
@@ -38,9 +36,5 @@ public class MixinGameRender {
 			),
 			index = 6
 	)
-	private int mapMouseY(int mouseY) {
-		return MinecraftClient.getInstance().currentScreen instanceof BookScreen && Settings.SMALL_BOOK ?
-				(int)(mouseY / Settings.SCALING_FACTOR) - Settings.TRANSLATE_Y :
-				mouseY;
-	}
+	private int mapMouseY(int mouseY) { return BookScreenRescaler.mapMouseY(mouseY); }
 }

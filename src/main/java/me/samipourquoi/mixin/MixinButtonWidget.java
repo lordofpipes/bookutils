@@ -1,6 +1,7 @@
 package me.samipourquoi.mixin;
 
 import me.samipourquoi.Settings;
+import me.samipourquoi.gui.BookScreenRescaler;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.ingame.BookScreen;
 import net.minecraft.client.gui.widget.AbstractButtonWidget;
@@ -16,11 +17,9 @@ public class MixinButtonWidget extends AbstractButtonWidget{
 
 	@Override
 	protected boolean clicked(double mouseX, double mouseY) {
-		if (MinecraftClient.getInstance().currentScreen instanceof BookScreen && Settings.SMALL_BOOK) {
-			return super.clicked(mouseX / Settings.SCALING_FACTOR - Settings.TRANSLATE_X,
-					mouseY / Settings.SCALING_FACTOR - Settings.TRANSLATE_Y);
-		}
-
-		return super.clicked(mouseX, mouseY);
+		return super.clicked(
+				BookScreenRescaler.mapMouseX((int)mouseX),
+				BookScreenRescaler.mapMouseY((int)mouseY)
+		);
 	}
 }
