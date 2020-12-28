@@ -4,12 +4,13 @@
   "package": "me.samipourquoi.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "MixinGameOptions"
   ],
   "client": [
     "MixinBookScreen",
+    "MixinButtonWidget",
     "MixinGameMenuScreen",
     "MixinGameRender",
-    "MixinButtonWidget",
     "MixinTitleScreen"
   ],
   "injectors": {

@@ -1,6 +1,7 @@
 package me.samipourquoi.gui;
 
 import me.samipourquoi.Settings;
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.ScreenTexts;
 import net.minecraft.client.gui.widget.ButtonListWidget;
@@ -24,6 +25,7 @@ public class EpiphanyOptionsMenu extends Screen {
 
 		this.addButton(new ButtonWidget(this.width / 2 - 100, this.height - 27, 200, 20, ScreenTexts.DONE, button -> {
 			this.client.openScreen(null);
+			MinecraftClient.getInstance().options.write();
 		}));
 	}
 
