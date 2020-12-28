@@ -9,7 +9,8 @@
     "MixinBookScreen",
     "MixinGameMenuScreen",
     "MixinGameRender",
-    "MixinButtonWidget"
+    "MixinButtonWidget",
+    "MixinTitleScreen"
   ],
   "injectors": {
     "defaultRequire": 1
