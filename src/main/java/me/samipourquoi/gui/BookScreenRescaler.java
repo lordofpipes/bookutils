@@ -6,8 +6,6 @@ import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.ingame.BookEditScreen;
 import net.minecraft.client.gui.screen.ingame.BookScreen;
 import net.minecraft.client.util.math.MatrixStack;
-import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.ModifyVariable;
 
 public class BookScreenRescaler {
 	public static final float SCALING_FACTOR = 0.5f;
@@ -40,7 +38,7 @@ public class BookScreenRescaler {
 
 	public static int mapMouseX(int mouseX) {
 		return isInSmallBookMode() ?
-				(int)(mouseX / SCALING_FACTOR) - TRANSLATE_X :
+				(int) (mouseX / SCALING_FACTOR) - TRANSLATE_X :
 				mouseX;
 	}
 

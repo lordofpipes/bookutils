@@ -24,9 +24,9 @@ public class Settings {
 
 	public static class OPTIONS {
 		public static BooleanOption SMALL_BOOK = new BooleanOption(
-			"options.small_book",
-			gameOptions -> Settings.SMALL_BOOK,
-			(gameOptions, enableSmallBook) -> Settings.SMALL_BOOK = enableSmallBook);
+				"options.small_book",
+				gameOptions -> Settings.SMALL_BOOK,
+				(gameOptions, enableSmallBook) -> Settings.SMALL_BOOK = enableSmallBook);
 
 		public static BooleanOption BOOKMARKING = new BooleanOption(
 				"options.bookmarking",

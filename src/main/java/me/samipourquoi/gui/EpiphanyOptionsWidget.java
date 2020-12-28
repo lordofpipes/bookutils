@@ -1,6 +1,5 @@
 package me.samipourquoi.gui;
 
-import com.mojang.blaze3d.systems.RenderSystem;
 import me.samipourquoi.Epiphany;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -17,8 +16,8 @@ public class EpiphanyOptionsWidget extends ButtonWidget {
 	@Override
 	public void renderButton(MatrixStack matrices, int mouseX, int mouseY, float delta) {
 		MinecraftClient.getInstance().getTextureManager().bindTexture(Epiphany.EPI_WIDGETS);
-		EpiphanyOptionsWidget.IconLocation iconLocation = this.isHovered()?
-				IconLocation.OPTIONS_HOVERED:
+		EpiphanyOptionsWidget.IconLocation iconLocation = this.isHovered() ?
+				IconLocation.OPTIONS_HOVERED :
 				IconLocation.OPTIONS;
 		this.drawTexture(matrices, this.x, this.y, iconLocation.u, iconLocation.v, this.width, this.height);
 	}

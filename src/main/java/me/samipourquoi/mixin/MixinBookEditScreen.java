@@ -18,10 +18,13 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(BookEditScreen.class)
 public class MixinBookEditScreen extends Screen {
-	@Shadow private int currentPage;
 	CompoundTag tag;
+	@Shadow
+	private int currentPage;
 
-	protected MixinBookEditScreen(Text title) { super(title); }
+	protected MixinBookEditScreen(Text title) {
+		super(title);
+	}
 
 	@Inject(method = "<init>",
 			at = @At("RETURN"))
@@ -36,10 +39,14 @@ public class MixinBookEditScreen extends Screen {
 	}
 
 	@Inject(method = "openNextPage", at = @At("TAIL"))
-	private void openNextPageInject(CallbackInfo info) { this.updateCurrentPageNBT(); }
+	private void openNextPageInject(CallbackInfo info) {
+		this.updateCurrentPageNBT();
+	}
 
 	@Inject(method = "openPreviousPage", at = @At("TAIL"))
-	private void openPreviousPageInject(CallbackInfo info) { this.updateCurrentPageNBT(); }
+	private void openPreviousPageInject(CallbackInfo info) {
+		this.updateCurrentPageNBT();
+	}
 
 	private void updateCurrentPageNBT() {
 		if (Settings.BOOKMARKING) {
