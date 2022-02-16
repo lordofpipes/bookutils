@@ -1,28 +1,41 @@
 {
   "schemaVersion": 1,
-  "id": "epiphany",
+  "id": "bookutils",
   "version": "${version}",
 
-  "name": "Epiphany",
-  "description": "💖 Made with love for Epiphany",
+  "name": "BookUtils",
+  "description": "Utility for Minecraft writable books",
   "authors": [
-    "samipourquoi"
+    "samipourquoi",
+    "lordpipe"
   ],
   "contact": {
+    "homepage": "https://github.com/lordofpipes/bookutils/blob/master/README.md",
+    "sources": "https://github.com/lordofpipes/bookutils",
+    "issues": "https://github.com/lordofpipes/bookutils/issues",
+    "irc": "irc://irc.libera.chat:6697/umm-minecraft"
   },
 
-  "license": "MIT",
+  "license": "GPL-3.0-or-later",
+  "icon": "assets/bookutils/icon.png",
 
   "environment": "*",
   "entrypoints": {
-    "main": [ ]
+    "client": [
+      "bookutils.BookUtils"
+    ],
+    "modmenu": [
+      "bookutils.ModMenuIntegration"
+    ]
   },
   "mixins": [
-    "epiphany.mixins.json"
+    "bookutils.mixins.json"
   ],
 
   "depends": {
-    "fabricloader": ">=0.7.4",
-    "minecraft": "1.16.x"
+    "fabricloader": ">=0.12.0",
+    "fabric": "*",
+    "minecraft": "1.18.x",
+    "java": ">=17"
   }
 }

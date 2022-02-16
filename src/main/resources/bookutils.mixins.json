@@ -1,17 +1,14 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "me.samipourquoi.mixin",
-  "compatibilityLevel": "JAVA_8",
+  "package": "bookutils.mixin",
+  "compatibilityLevel": "JAVA_17",
   "mixins": [],
   "client": [
     "MixinBookScreen",
     "MixinBookEditScreen",
     "MixinButtonWidget",
-    "MixinGameMenuScreen",
-    "MixinGameRender",
-    "MixinTitleScreen",
-    "MixinGameOptions"
+    "MixinGameRender"
   ],
   "injectors": {
     "defaultRequire": 1

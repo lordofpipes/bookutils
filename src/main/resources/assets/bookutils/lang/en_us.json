@@ -1,0 +1,12 @@
+{
+  "text.autoconfig.bookutils.title": "Book Utilities",
+  "text.autoconfig.bookutils.option.smallBookGui": "Small Book GUI",
+  "text.autoconfig.bookutils.option.bookmarking": "Bookmarking",
+  "key.bookutils.toggleSmallGui": "Toggle Small Book Editing GUI",
+  "key.bookutils.toggleBookmarking": "Toggle Bookmarking",
+  "message.bookutils.enabledBookmarking": "Local bookmarking has been enabled",
+  "message.bookutils.disabledBookmarking": "Local bookmarking has been disabled",
+  "message.bookutils.enabledSmallGui": "Small book GUI has been enabled",
+  "message.bookutils.disabledSmallGui": "Small book GUI has been disabled",
+  "category.bookutils": "Book Utilities"
+}
