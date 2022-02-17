@@ -62,7 +62,7 @@ public class BookUtils implements ClientModInitializer {
                 config.bookmarking = !config.bookmarking;
                 AutoConfig.getConfigHolder(ModConfig.class).save();
                 client.player.sendMessage(
-                    new TranslatableText(config.smallBookGui ? "message.bookutils.enabledBookmarking" : "message.bookutils.disabledBookmarking"), false);
+                    new TranslatableText(config.bookmarking ? "message.bookutils.enabledBookmarking" : "message.bookutils.disabledBookmarking"), false);
             }
         });
     }
