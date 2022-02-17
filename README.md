@@ -2,7 +2,9 @@
 
 Makes the Minecraft book GUI smaller, and other things.
 
-Recommended to install Mod Menu and Cloth Config.
+Required to install Fabric API, Cloth Config
+
+Recommended to install Mod Menu.
 
 **Need 1.16 support? See the original mod by samipourquoi:** https://github.com/samipourquoi/epiphany
 
